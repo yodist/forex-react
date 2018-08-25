@@ -9,7 +9,7 @@ function NewCurrency(props) {
           onChange={props.changeHandler}
           className="col-10"
         >
-          {props.currencyCode.map(code => <option value={code}>{code}</option>)};
+          {props.currencyCode.map(code => <option key={code} value={code}>{code}</option>)};
         </select>
         <button className="col-2" onClick={props.addCurrency}>
           Submit

@@ -5,7 +5,7 @@ function CurrencyList(props) {
   return (
     <div className="CurrencyList">
       {props.currencies.map(currency => (
-        <Currency currency={currency} removeCurrency={props.removeCurrency} />
+        <Currency key={currency.curr} currency={currency} removeCurrency={props.removeCurrency} />
       ))}
     </div>
   );
