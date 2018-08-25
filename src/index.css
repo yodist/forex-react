@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+}
+
+.AppBody {
+  margin-top: 5rem;
+}
+
+.BaseCurrency {
+  background: white;
+  border-bottom: 1px black solid;
+  padding: 0.5em 1em 0 1em;
+}
+
+.BaseCurrency p {
+  margin: 0;
+  font-style: italic;
+}
+
+.BaseCurrency h4 {
+  font-weight: bold;
+}
+
+.BaseCurrency input {
+  border: none;
+  margin: none;
+  font-weight: bold;
+  text-align: right;
+  font-size: 1.5em;
+  height: 1.25em;
+}
+
+.Currency {
+  border: 1px black solid;
+  margin: 1em;
+  padding: 0.25em 1em 0.25em 1em;
+}
+
+.Currency p {
+  margin: 0;
+}
+
+.Currency .amount {
+  text-align: right;
+}
+
+.Currency .removeButton {
+  border-left: 1px black solid;
+  padding: 0;
+  text-align: center;
+  font-size: 2em;
+}
+
+.Currency .removeButton span {
+  vertical-align: middle;
+}
+
+.NewCurrency .currency-form {
+  margin: 1em;
+  border: 1px black solid;
+}
+
+.NewCurrency .currency-form * {
+  border: none;
+  padding: 0.5em;
+  background: white;
+}
+
+.NewCurrency .currency-form button {
+  border-left: 1px black solid;
+}
+
+.NewCurrency .placeholder {
+  border: 1px black solid;
+  margin: 1em;
+  padding: 0.5em;
+}
+
+Dropdown {
+  color: blue;
+}
