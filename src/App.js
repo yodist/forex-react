@@ -60,13 +60,13 @@ class App extends Component {
           currencies: [
             {
               curr: "CAD",
-              name: "Canadian Dollar",
+              name: currencyName["CAD"],
               rates: this.state.currencyRate["CAD"],
               amount: this.state.currencyRate["CAD"] * this.state.baseAmount
             },
             {
               curr: "IDR",
-              name: "Indonesian Rupiah",
+              name: currencyName["IDR"],
               rates: this.state.currencyRate["IDR"],
               amount: this.state.currencyRate["IDR"] * this.state.baseAmount
             }
@@ -84,15 +84,15 @@ class App extends Component {
         errorMessage: ERROR_MSG.NUMBER
       });
     else
-      this.setState({
+      this.setState(prevState => ({
         baseAmount: event.target.value,
-        currencies: this.state.currencies.map(currency =>
+        currencies: prevState.currencies.map(currency =>
           Object.assign(currency, {
             amount: currency.rates * event.target.value
           })
         ),
         errorMessage: ""
-      });
+      }));
   }
 
   newCurrChangeHandler(event) {
@@ -122,12 +122,11 @@ class App extends Component {
         currencies: [
           ...prevState.currencies,
           {
-            curr: this.state.newCurr,
-            name: currencyName[this.state.newCurr],
-            rates: this.state.currencyRate[this.state.newCurr],
+            curr: prevState.newCurr,
+            name: currencyName[prevState.newCurr],
+            rates: prevState.currencyRate[prevState.newCurr],
             amount:
-              this.state.currencyRate[this.state.newCurr] *
-              this.state.baseAmount
+              prevState.currencyRate[prevState.newCurr] * prevState.baseAmount
           }
         ],
         newCurr: "CAD"
